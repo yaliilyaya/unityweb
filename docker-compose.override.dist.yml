@@ -4,13 +4,6 @@ services:
   #Nginx Service
   webserver:
     ports:
-      - 17180:80
-  db:
-    ports:
-      - 17188:3306
+      - 31180:80
     volumes:
-      # - ./dockerfile/db/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d
-      # - ./dockerfile/db/etc/mysql:/etc/mysql/conf.d
-      - db.volume:/var/lib/mysql:rw
-volumes:
-  db.volume:
+      - dockerfile/webserver/conf.d/:/etc/nginx/conf.d/
