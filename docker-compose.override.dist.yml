@@ -6,4 +6,4 @@ services:
     ports:
       - 31180:80
     volumes:
-      - dockerfile/webserver/conf.d/:/etc/nginx/conf.d/
+      - "./dockerfile/webserver/conf.d/:/etc/nginx/conf.d/"
